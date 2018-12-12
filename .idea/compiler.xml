@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="hello-api" />
+        <module name="hello-impl" />
+        <module name="integration-test" />
+        <module name="product-api" />
+        <module name="product-impl" />
+        <module name="stream-api" />
+        <module name="stream-impl" />
+        <module name="userapi" />
+        <module name="userimpl" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="hello" target="1.8" />
+      <module name="hello-api" target="1.8" />
+      <module name="hello-impl" target="1.8" />
+      <module name="integration-test" target="1.8" />
+      <module name="product-api" target="1.8" />
+      <module name="product-impl" target="1.8" />
+      <module name="stream-api" target="1.8" />
+      <module name="stream-impl" target="1.8" />
+      <module name="userapi" target="1.8" />
+      <module name="userimpl" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="hello-api" options="-parameters" />
+      <module name="hello-impl" options="-parameters" />
+      <module name="integration-test" options="-parameters" />
+      <module name="product-api" options="-parameters" />
+      <module name="product-impl" options="-parameters" />
+      <module name="stream-api" options="-parameters" />
+      <module name="stream-impl" options="-parameters" />
+      <module name="userapi" options="-parameters" />
+      <module name="userimpl" options="-parameters" />
+    </option>
+  </component>
+</project>
