@@ -19,6 +19,8 @@
         <module>product-impl</module>
         <module>user-api</module>
         <module>user-impl</module>
+        <module>notification-api</module>
+        <module>notification-impl</module>
     </modules>
 
     <build>
