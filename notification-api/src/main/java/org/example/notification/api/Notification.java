@@ -5,7 +5,7 @@ public class Notification {
     private String body;
 
     public Notification(){
-
+            System.out.print("fjdsojfbsafd");
     }
 
     public Notification(String body){
