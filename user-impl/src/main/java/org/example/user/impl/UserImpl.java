@@ -21,20 +21,16 @@ public class UserImpl implements UserService {
 
     @Override
     public ServiceCall<NotUsed, User> getUserById(String id) {
-        System.out.println("get user by id method is called with id : "+id);
-        return request -> CompletableFuture.completedFuture(userRepository.getUser(id));
 
+        System.out.println("get user by id method is called with id : "+id);
+
+        return request -> CompletableFuture.completedFuture(userRepository.getUser(id));
     }
 
     @Override
     public ServiceCall<User, Done> addUser() {
         System.out.println("addUser method is called with id : ");
         return request -> {
-            //save the product in database
-            ////System.out.println(request.getId());
-            //System.out.println(request.getDescription());
-            //System.out.println(request.getUnitPrice());
-
             userRepository.addUser(request);
             return CompletableFuture.completedFuture(Done.getInstance());
         };
