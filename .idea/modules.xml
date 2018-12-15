@@ -6,6 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/hello-api/hello-api.iml" filepath="$PROJECT_DIR$/hello-api/hello-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/hello-impl/hello-impl.iml" filepath="$PROJECT_DIR$/hello-impl/hello-impl.iml" />
       <module fileurl="file://$PROJECT_DIR$/integration-tests/integration-test.iml" filepath="$PROJECT_DIR$/integration-tests/integration-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/notification-api/notificationapi.iml" filepath="$PROJECT_DIR$/notification-api/notificationapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/notification-impl/notificationimpl.iml" filepath="$PROJECT_DIR$/notification-impl/notificationimpl.iml" />
       <module fileurl="file://$PROJECT_DIR$/product-api/product-api.iml" filepath="$PROJECT_DIR$/product-api/product-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/product-impl/product-impl.iml" filepath="$PROJECT_DIR$/product-impl/product-impl.iml" />
       <module fileurl="file://$PROJECT_DIR$/stream-api/stream-api.iml" filepath="$PROJECT_DIR$/stream-api/stream-api.iml" />

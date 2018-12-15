@@ -9,6 +9,8 @@
         <module name="hello-api" />
         <module name="hello-impl" />
         <module name="integration-test" />
+        <module name="notificationapi" />
+        <module name="notificationimpl" />
         <module name="product-api" />
         <module name="product-impl" />
         <module name="stream-api" />
@@ -22,6 +24,8 @@
       <module name="hello-api" target="1.8" />
       <module name="hello-impl" target="1.8" />
       <module name="integration-test" target="1.8" />
+      <module name="notificationapi" target="1.8" />
+      <module name="notificationimpl" target="1.8" />
       <module name="product-api" target="1.8" />
       <module name="product-impl" target="1.8" />
       <module name="stream-api" target="1.8" />
@@ -35,6 +39,8 @@
       <module name="hello-api" options="-parameters" />
       <module name="hello-impl" options="-parameters" />
       <module name="integration-test" options="-parameters" />
+      <module name="notificationapi" options="-parameters" />
+      <module name="notificationimpl" options="-parameters" />
       <module name="product-api" options="-parameters" />
       <module name="product-impl" options="-parameters" />
       <module name="stream-api" options="-parameters" />

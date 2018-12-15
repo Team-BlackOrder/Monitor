@@ -10,9 +10,9 @@ public class InMemoryUserRepository implements UserRepository {
     Map<String,User> userMap= new HashMap<>();
 
     public InMemoryUserRepository(){
-        User user1=new User("1","VJ","0765454","nsbd@sjds.com");
+        User user1=new User("1","VJ","0765454","nsbd@sjds.com","sms");
 
-        User user2=new User("2","Maheshi","01546646","bsdv@nbsdv.com");
+        User user2=new User("2","Maheshi","01546646","bsdv@nbsdv.com","email");
 
         userMap.put("1",user1);
         userMap.put("2",user2);

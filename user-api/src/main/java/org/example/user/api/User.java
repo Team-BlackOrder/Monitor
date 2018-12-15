@@ -5,16 +5,18 @@ public class User {
     private String name;
     private String tel;
     private String email;
+    private String preferedAlertMethod;
 
     public User(){
 
     }
 
-    public User(String id,String name,String tel,String email){
+    public User(String id,String name,String tel,String email,String preferedAlertMethod){
         this.id=id;
         this.name=name;
         this.tel=tel;
         this.email=email;
+        this.preferedAlertMethod=preferedAlertMethod;
     }
 
     public String getId() {
@@ -47,5 +49,13 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPreferedAlertMethod() {
+        return preferedAlertMethod;
+    }
+
+    public void setPreferedAlertMethod(String preferedAlertMethod) {
+        this.preferedAlertMethod = preferedAlertMethod;
     }
 }
