@@ -11,12 +11,14 @@ import static com.lightbend.lagom.javadsl.api.Service.pathCall;
 public interface UserService extends Service {
     ServiceCall<NotUsed,User>getUserById(String id);
     ServiceCall<User, Done> addUser();
+    ServiceCall<NotUsed,User>getUserBySensorId(String id);
 
     @Override
     default Descriptor descriptor() {
         return Service.named("user").withCalls(
                 pathCall("/api/user/:id",this::getUserById),
-                pathCall("/api/user",this::addUser)
+                pathCall("/api/user",this::addUser),
+                pathCall("/api/user",this::getUserBySensorId)
         ).withAutoAcl(true);
     }
 }

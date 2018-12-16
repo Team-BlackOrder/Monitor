@@ -10,14 +10,69 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>alert-impl</artifactId>
+
+    <packaging>jar</packaging>
+
     <dependencies>
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>user-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>notification-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
         <dependency>
             <groupId>org.example</groupId>
             <artifactId>alert-api</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>com.lightbend.lagom</groupId>
+            <artifactId>lagom-javadsl-server_${scala.binary.version}</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.lightbend.lagom</groupId>
+            <artifactId>lagom-javadsl-persistence-cassandra_${scala.binary.version}</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.lightbend.lagom</groupId>
+            <artifactId>lagom-logback_${scala.binary.version}</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.typesafe.play</groupId>
+            <artifactId>play-akka-http-server_${scala.binary.version}</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.lightbend.lagom</groupId>
+            <artifactId>lagom-javadsl-testkit_${scala.binary.version}</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.lightbend.lagom</groupId>
+            <artifactId>lagom-javadsl-kafka-broker_${scala.binary.version}</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
     </dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.lightbend.lagom</groupId>
+                <artifactId>lagom-maven-plugin</artifactId>
+                <configuration>
+                    <lagomService>true</lagomService>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

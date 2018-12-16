@@ -5,7 +5,7 @@ public class User {
     private String name;
     private String tel;
     private String email;
-    private String preferedAlertMethod;
+    private String preferredAlertMethod;
 
     public User(){
 
@@ -16,7 +16,7 @@ public class User {
         this.name=name;
         this.tel=tel;
         this.email=email;
-        this.preferedAlertMethod=preferedAlertMethod;
+        this.preferredAlertMethod =preferedAlertMethod;
     }
 
     public String getId() {
@@ -51,11 +51,11 @@ public class User {
         this.email = email;
     }
 
-    public String getPreferedAlertMethod() {
-        return preferedAlertMethod;
+    public String getPreferredAlertMethod() {
+        return preferredAlertMethod;
     }
 
-    public void setPreferedAlertMethod(String preferedAlertMethod) {
-        this.preferedAlertMethod = preferedAlertMethod;
+    public void setPreferredAlertMethod(String preferredAlertMethod) {
+        this.preferredAlertMethod = preferredAlertMethod;
     }
 }

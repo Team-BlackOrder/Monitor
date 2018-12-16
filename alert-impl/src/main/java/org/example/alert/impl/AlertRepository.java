@@ -7,6 +7,6 @@ import org.example.user.api.User;
 @ImplementedBy(MongoDbAlertRepository.class)
 public interface AlertRepository
 {
-    User getAlert(String id);
+    Alert getAlert(String id);
     void storeAlert(Alert alert);
 }

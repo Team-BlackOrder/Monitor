@@ -21,6 +21,13 @@ public class Alert
         alertId = "alert001";
     }
 
+    public Alert(String alertId, SensorData sensor, User user)
+    {
+        this.alertId = alertId;
+        this.sensor = sensor;
+        this.user = user;
+    }
+
     public String getAlertId()
     {
         return alertId;

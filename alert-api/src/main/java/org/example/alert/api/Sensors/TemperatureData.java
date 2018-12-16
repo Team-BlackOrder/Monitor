@@ -8,6 +8,12 @@ public class TemperatureData implements SensorData
     private LocalDateTime timeStamp;
     private double readingInCelcius;
 
+    public TemperatureData(String sensorId, String timeStamp, String readingInCelcius)
+    {
+        this.sensorId = sensorId;
+        this.timeStamp = LocalDateTime.parse(timeStamp);
+        this.readingInCelcius = Double.parseDouble(readingInCelcius);
+    }
 
     @Override
     public String getSensorId()
