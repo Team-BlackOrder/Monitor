@@ -24,15 +24,21 @@ public class UserImpl implements UserService {
 
         System.out.println("get user by id method is called with id : "+id);
 
-        return request -> CompletableFuture.completedFuture(userRepository.getUser(id));
+        return request -> CompletableFuture.completedFuture(userRepository.getUserById(id));
     }
 
     @Override
     public ServiceCall<User, Done> addUser() {
-        System.out.println("addUser method is called with id : ");
+        System.out.println("addUser method is called..");
         return request -> {
             userRepository.addUser(request);
             return CompletableFuture.completedFuture(Done.getInstance());
         };
+    }
+
+    @Override
+    public ServiceCall<NotUsed, User> getUserBySensorId(String sensorId) {
+        System.out.println("getUserBySensorId method is called with id."+sensorId);
+        return request -> CompletableFuture.completedFuture(userRepository.getUserBySensor(sensorId));
     }
 }
