@@ -61,6 +61,14 @@ public class AlertImpl implements AlertService
                             break;
                     }
                 }
+                catch (ExecutionException e)
+                {
+                    e.printStackTrace();
+                }
+                catch (InterruptedException e)
+                {
+                    e.printStackTrace();
+                }
                 catch (Exception e)
                 {
                     e.printStackTrace();
