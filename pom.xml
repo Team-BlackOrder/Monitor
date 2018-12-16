@@ -21,6 +21,8 @@
         <module>user-impl</module>
         <module>notification-api</module>
         <module>notification-impl</module>
+        <module>alert-api</module>
+        <module>alert-impl</module>
     </modules>
 
     <build>

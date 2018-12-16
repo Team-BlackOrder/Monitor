@@ -6,6 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="alert-api" />
+        <module name="alert-impl" />
         <module name="hello-api" />
         <module name="hello-impl" />
         <module name="integration-test" />
@@ -20,6 +22,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="alert-api" target="1.8" />
+      <module name="alert-impl" target="1.8" />
       <module name="hello" target="1.8" />
       <module name="hello-api" target="1.8" />
       <module name="hello-impl" target="1.8" />
