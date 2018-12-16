@@ -8,15 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="alert-api" />
         <module name="alert-impl" />
-        <module name="hello-api" />
-        <module name="hello-impl" />
         <module name="integration-test" />
         <module name="notificationapi" />
         <module name="notificationimpl" />
-        <module name="product-api" />
-        <module name="product-impl" />
-        <module name="stream-api" />
-        <module name="stream-impl" />
         <module name="userapi" />
         <module name="userimpl" />
       </profile>

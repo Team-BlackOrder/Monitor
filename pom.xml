@@ -10,13 +10,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>hello-api</module>
-        <module>hello-impl</module>
-        <module>stream-api</module>
-        <module>stream-impl</module>
         <module>integration-tests</module>
-        <module>product-api</module>
-        <module>product-impl</module>
         <module>user-api</module>
         <module>user-impl</module>
         <module>notification-api</module>
@@ -93,7 +87,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <scala.binary.version>2.12</scala.binary.version>
-        
+
         <lagom.version>1.5.0-RC1</lagom.version>
     </properties>
 </project>
