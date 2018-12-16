@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 
 public interface SensorData
 {
+
     String getSensorId();
     LocalDateTime getTimeStamp();
     double getReading();

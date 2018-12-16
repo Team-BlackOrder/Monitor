@@ -22,11 +22,12 @@ public class AlertImpl implements AlertService
     private double alertThreshold;
     private final UserService userService;
     private final NotificationService notificationService;
-
+    private String divider = "\n--------------------------------------------------------------------------------------\n";
 
 
     @Inject
-    public AlertImpl(AlertRepository userRepository,UserService userService,NotificationService notificationService){
+    public AlertImpl(AlertRepository userRepository, UserService userService, NotificationService notificationService)
+    {
 
         this.alertRepository = userRepository;
         this.userService = userService;
@@ -34,16 +35,16 @@ public class AlertImpl implements AlertService
     }
 
 
-
     @Override
-    public ServiceCall<TemperatureData, Done> triggerAlert() {
+    public ServiceCall<TemperatureData, Done> triggerAlert()
+    {
         System.out.println("storeAlert method is called with id : ");
         return request -> {
-            if(request.getReading() > alertThreshold)
+            if (request.getReading() > alertThreshold)
             {
                 try
                 {
-                    User user =  userService.getUserBySensorId(request.getSensorId()).invoke().toCompletableFuture().get();
+                    User user = userService.getUserBySensorId(request.getSensorId()).invoke().toCompletableFuture().get();
                     Alert alert = new Alert(request, user);
                     alertRepository.storeAlert(alert);
 
@@ -60,16 +61,15 @@ public class AlertImpl implements AlertService
                             System.out.println("Invalid notification method");
                             break;
                     }
-                }
-                catch (ExecutionException e)
+                } catch (ExecutionException e)
                 {
+                    System.out.println("Execution Exception Occurred!");
                     e.printStackTrace();
-                }
-                catch (InterruptedException e)
+                } catch (InterruptedException e)
                 {
+                    System.out.println("Interrupted Exception Occurred!");
                     e.printStackTrace();
-                }
-                catch (Exception e)
+                } catch (Exception e)
                 {
                     e.printStackTrace();
                 }
@@ -82,11 +82,11 @@ public class AlertImpl implements AlertService
     public ServiceCall<NotUsed, Done> setAlertThreshold(String threshold)
     {
         alertThreshold = Double.parseDouble(threshold);
+        System.out.println(divider);
         System.out.println("New Threshold: " + alertThreshold);
         return request -> CompletableFuture.completedFuture(Done.getInstance());
 
     }
-
 
 
     @Override

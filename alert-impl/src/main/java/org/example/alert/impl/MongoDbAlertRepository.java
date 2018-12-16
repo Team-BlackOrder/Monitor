@@ -11,7 +11,7 @@ import java.util.Map;
 public class MongoDbAlertRepository implements AlertRepository {
 
     Map<String,Map.Entry<SensorData,User>> userMap= new HashMap<>();
-
+    private String divider = "\n--------------------------------------------------------------------------------------\n";
     public MongoDbAlertRepository(){
 
     }
@@ -28,7 +28,8 @@ public class MongoDbAlertRepository implements AlertRepository {
     @Override
     public void storeAlert(Alert alert) {
         userMap.put(alert.getAlertId(),new AbstractMap.SimpleEntry(alert.getSensor(),alert.getUser()));
-        System.out.println("Sensor Id: " + alert.getSensor().getSensorId() + "Time: " + alert.getSensor().getTimeStamp());
+        System.out.println(divider);
+        System.out.println("Sensor Id: " + alert.getSensor().getSensorId() + "\nTime: " + alert.getSensor().getTimeStamp() + "\nReading: " + alert.getSensor().getReading());
 
     }
 }

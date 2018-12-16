@@ -10,14 +10,14 @@ import java.util.concurrent.CompletableFuture;
 
 public class NotificationImpl implements NotificationService {
 
-    Notification notification=new Notification();
-
+    private String divider = "\n--------------------------------------------------------------------------------------\n";
     @Override
     public ServiceCall<NotUsed, Done> sendEmail() {
 
         return request -> {
-//            notification=request;
-            System.out.println("Sending Email......." + "\n" );
+            System.out.println(divider);
+            System.out.println("Sending Email to notify user......." );
+            System.out.println(divider);
             return CompletableFuture.completedFuture(Done.getInstance());
         };
     }
@@ -26,8 +26,9 @@ public class NotificationImpl implements NotificationService {
     public ServiceCall<NotUsed, Done> sendSms() {
 
         return request -> {
-//            notification=request;
-            System.out.println("Sending SMS......."+ "\n");
+            System.out.println(divider);
+            System.out.println("Sending SMS to notify user.......");
+            System.out.println(divider);
             return CompletableFuture.completedFuture(Done.getInstance());
         };
     }
