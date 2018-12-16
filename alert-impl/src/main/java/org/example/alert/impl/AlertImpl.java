@@ -47,14 +47,18 @@ public class AlertImpl implements AlertService
                     Alert alert = new Alert(request, user);
                     alertRepository.storeAlert(alert);
 
+
                     switch (user.getPreferredAlertMethod())
                     {
                         case "sms":
-                            notificationService.sendSms();
+                            notificationService.sendSms().invoke();
+                            break;
                         case "email":
-                            notificationService.sendEmail();
+                            notificationService.sendEmail().invoke();
+                            break;
                         default:
                             System.out.println("Invalid notification method");
+                            break;
                     }
                 }
                 catch (Exception e)
@@ -70,6 +74,7 @@ public class AlertImpl implements AlertService
     public ServiceCall<NotUsed, Done> setAlertThreshold(String threshold)
     {
         alertThreshold = Double.parseDouble(threshold);
+        System.out.println("New Threshold: " + alertThreshold);
         return request -> CompletableFuture.completedFuture(Done.getInstance());
 
     }

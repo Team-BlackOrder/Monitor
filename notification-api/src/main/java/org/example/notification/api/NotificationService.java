@@ -11,8 +11,8 @@ import static com.lightbend.lagom.javadsl.api.Service.named;
 
 public interface NotificationService extends Service {
 
-    ServiceCall<Notification, Done> sendEmail();
-    ServiceCall<Notification, Done> sendSms();
+    ServiceCall<NotUsed, Done> sendEmail();
+    ServiceCall<NotUsed, Done> sendSms();
 
     @Override
     default Descriptor descriptor(){
