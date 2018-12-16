@@ -27,7 +27,7 @@ public class StreamServiceImpl implements StreamService {
   @Override
   public ServiceCall<Source<String, NotUsed>, Source<String, NotUsed>> directStream() {
     return hellos -> completedFuture(
-      hellos.mapAsync(8, name ->  helloService.hello(name).invoke()));
+     // hellos.mapAsync(8, name ->  helloService.hello(name).invoke()));
   }
 
   @Override

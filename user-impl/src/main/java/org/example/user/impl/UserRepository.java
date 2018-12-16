@@ -5,6 +5,7 @@ import org.example.user.api.User;
 
 @ImplementedBy(InMemoryUserRepository.class)
 public interface UserRepository {
-    User getUser(String id);
+    User getUserById(String id);
     void addUser(User user);
+    User getUserBySensor(String sensorId);
 }
