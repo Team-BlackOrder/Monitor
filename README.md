@@ -25,7 +25,7 @@ sensor and user can see the historical alerts occurred in each sensor via the us
 interface.
 
 
-
+### Has Used:
 
 * Used Apache NiFi for data ingestion.(Architecture diagram is available in Nifi template directory)
 
