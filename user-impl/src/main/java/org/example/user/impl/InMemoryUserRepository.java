@@ -33,11 +33,16 @@ public class InMemoryUserRepository implements UserRepository {
     }
 
     @Override
-    public User getUserBySensor(String sensorId) {
+    public User getUserBySensorId(String sensorId) {
         if(userMap.containsKey(sensorId)){
             return userMap.get(sensorId);
         }
         return null;
     }
 
+    @Override
+    public void removeUser(String id)
+    {
+
     }
+}

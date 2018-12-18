@@ -1,5 +1,7 @@
 package org.example.user.api;
 
+
+
 public class User {
     private String id;
     private String sensorId;
@@ -16,7 +18,7 @@ public class User {
 
     public User(String id, String sensorId, String name, String tel, String email, String preferedAlertMethod){
         this.id=id;
-        this.sensorId=sensorId;
+        this.sensorId = sensorId;
         this.name=name;
         this.tel=tel;
         this.email=email;
@@ -63,11 +65,13 @@ public class User {
         this.preferredAlertMethod = preferredAlertMethod;
     }
 
-    public String getSensorId() {
+    public String getSensorId()
+    {
         return sensorId;
     }
 
-    public void setSensorId(String sensorId) {
+    public void setSensorId(String sensorId)
+    {
         this.sensorId = sensorId;
     }
 }

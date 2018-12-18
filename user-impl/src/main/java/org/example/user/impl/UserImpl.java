@@ -22,14 +22,14 @@ public class UserImpl implements UserService {
     @Override
     public ServiceCall<NotUsed, User> getUserById(String id) {
 
-        System.out.println("get user by id method is called with id : "+id);
+        System.out.println("\nGetting User ID : "+ id);
 
         return request -> CompletableFuture.completedFuture(userRepository.getUserById(id));
     }
 
     @Override
     public ServiceCall<User, Done> addUser() {
-        System.out.println("addUser method is called..");
+        System.out.println("\nAdding A new User");
         return request -> {
             userRepository.addUser(request);
             return CompletableFuture.completedFuture(Done.getInstance());
@@ -38,7 +38,16 @@ public class UserImpl implements UserService {
 
     @Override
     public ServiceCall<NotUsed, User> getUserBySensorId(String sensorId) {
-        System.out.println("getUserBySensorId method is called with id."+sensorId);
-        return request -> CompletableFuture.completedFuture(userRepository.getUserBySensor(sensorId));
+        System.out.println("Getting the user with sensor ID :"+ sensorId);
+        return request -> CompletableFuture.completedFuture(userRepository.getUserBySensorId(sensorId));
+    }
+
+    @Override
+    public ServiceCall<NotUsed, Done> removeUser(String id)
+    {
+        return request -> {
+            userRepository.removeUser(id);
+            return CompletableFuture.completedFuture(Done.getInstance());
+        };
     }
 }
