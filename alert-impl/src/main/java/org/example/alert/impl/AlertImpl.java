@@ -32,14 +32,18 @@ public class AlertImpl implements AlertService
         this.alertRepository = userRepository;
         this.userService = userService;
         this.notificationService = notificationService;
+
     }
 
 
     @Override
     public ServiceCall<TemperatureData, Done> triggerAlert()
     {
-        System.out.println("storeAlert method is called with id : ");
+        System.out.println(divider);
+        System.out.println("Storing Alert......");
+        alertThreshold = alertRepository.getThreshold();
         return request -> {
+
             if (request.getReading() > alertThreshold)
             {
                 try
@@ -82,6 +86,7 @@ public class AlertImpl implements AlertService
     public ServiceCall<NotUsed, Done> setAlertThreshold(String threshold)
     {
         alertThreshold = Double.parseDouble(threshold);
+        alertRepository.storeThreshold(threshold);
         System.out.println(divider);
         System.out.println("New Threshold: " + alertThreshold);
         return request -> CompletableFuture.completedFuture(Done.getInstance());
@@ -89,11 +94,7 @@ public class AlertImpl implements AlertService
     }
 
 
-    @Override
-    public ServiceCall<NotUsed, NotUsed> test()
-    {
-        return null;
-    }
+
 
 
 }
