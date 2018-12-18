@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/alert-api/alert-api.iml" filepath="$PROJECT_DIR$/alert-api/alert-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/alert-impl/alert-impl.iml" filepath="$PROJECT_DIR$/alert-impl/alert-impl.iml" />
       <module fileurl="file://$PROJECT_DIR$/hello.iml" filepath="$PROJECT_DIR$/hello.iml" />
-      <module fileurl="file://$PROJECT_DIR$/integration-tests/integration-test.iml" filepath="$PROJECT_DIR$/integration-tests/integration-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/notification-api/notificationapi.iml" filepath="$PROJECT_DIR$/notification-api/notificationapi.iml" />
       <module fileurl="file://$PROJECT_DIR$/notification-impl/notificationimpl.iml" filepath="$PROJECT_DIR$/notification-impl/notificationimpl.iml" />
       <module fileurl="file://$PROJECT_DIR$/user-api/userapi.iml" filepath="$PROJECT_DIR$/user-api/userapi.iml" />

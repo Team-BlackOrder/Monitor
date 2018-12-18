@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>integration-tests</module>
+
         <module>user-api</module>
         <module>user-impl</module>
         <module>notification-api</module>

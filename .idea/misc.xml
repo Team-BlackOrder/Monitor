@@ -10,6 +10,7 @@
       <set>
         <option value="$PROJECT_DIR$/hello-api/pom.xml" />
         <option value="$PROJECT_DIR$/hello-impl/pom.xml" />
+        <option value="$PROJECT_DIR$/integration-tests/pom.xml" />
         <option value="$PROJECT_DIR$/product-api/pom.xml" />
         <option value="$PROJECT_DIR$/product-impl/pom.xml" />
         <option value="$PROJECT_DIR$/stream-api/pom.xml" />

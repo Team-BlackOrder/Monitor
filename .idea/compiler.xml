@@ -8,7 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="alert-api" />
         <module name="alert-impl" />
-        <module name="integration-test" />
         <module name="notificationapi" />
         <module name="notificationimpl" />
         <module name="userapi" />
