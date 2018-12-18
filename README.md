@@ -24,11 +24,11 @@ the user using a web portal. The sensor readings visualized as graphs for each
 sensor and user can see the historical alerts occurred in each sensor via the user
 interface.
 
-![alt text](https://github.com/VJFernandez123/About-Me/blob/master/Capture.JPG)
 
 
-=>> Used Apache NiFi for data ingestion.
 
-=>> Used MongoDB to store the data.
+* Used Apache NiFi for data ingestion.(Architecture diagram is available in Nifi template directory)
 
-=>> Used Java Lagom framework to implement the Microservices.
+* Used MongoDB to store the data.
+
+* Used Java Lagom framework to implement the Microservices.
