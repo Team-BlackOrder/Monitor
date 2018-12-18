@@ -15,6 +15,8 @@ public class TemperatureData implements SensorData
         this.readingInCelcius = Double.parseDouble(readingInCelcius);
     }
 
+
+
     @Override
     public String getSensorId()
     {
